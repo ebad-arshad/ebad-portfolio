@@ -11,13 +11,13 @@ import Services from "@/containers/Services";
 import Layout from "@/containers/Layout";
 import ToggleColorTheme from "@/components/ToggleColorTheme";
 import Sidebar from '@/containers/Sidebar';
+import Navbar from '@/containers/Navbar';
 
 export default function Home() {
   return (
     <main className={`${rubik.className} flex`}>
-      <div className='fixed top-0 left-0 hidden lg:block w-[250px] bg-sidebar h-screen'>
-        <Sidebar />
-      </div>
+      <Navbar />
+      <Sidebar />
 
       <ToggleTheme />
       <ToggleColorTheme />

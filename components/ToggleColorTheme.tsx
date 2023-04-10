@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react'
+import React, { FC, useState } from 'react'
 import { IoMdSettings } from 'react-icons/io'
 import { motion } from 'framer-motion'
 import { Divider } from '@mantine/core'
@@ -18,16 +18,20 @@ const ToggleColorTheme: FC = () => {
     }
 
     return (
-        <div
-            className={`fixed top-[30%] ${!color_palette_box ? '-right-[193px]' : 'right-0'} z-50 flex`}>
+        <motion.div
+            // ${!color_palette_box ? '-right-[193px]' : 'right-0'}
+            initial={{ x: '193px' }}
+            animate={{ x: color_palette_box ? 0 : '193px' }}
+            transition={{ type: 'tween', duration: .2 }}
+            className={`fixed top-[30%] right-0 z-50 flex text-white dark:text-black`}>
             <div
                 className='grid place-items-center w-9 h-9'>
                 <IoMdSettings
-                    className='rounded-tl-lg rounded-bl-lg bg-white text-black p-2 text-lg cursor-pointer w-[inherit] h-[inherit]'
+                    className='rounded-tl-lg rounded-bl-lg bg-black dark:bg-white p-2 text-lg cursor-pointer w-[inherit] h-[inherit]'
                     onClick={() => set_color_palette_box(e => e ? false : true)} />
             </div>
             <div
-                className='text-black bg-white p-4 w-48'
+                className='bg-black dark:bg-white p-4 w-48'
             >
                 Color Switcher
                 <Divider my="sm" />
@@ -41,7 +45,7 @@ const ToggleColorTheme: FC = () => {
                 <Divider my="sm" />
                 <button onClick={() => { set_color('#20c997'); close_palette() }} className='cursor-pointer bg-[#20c997] text-white w-full py-2'>Reset Default Teal</button>
             </div>
-        </div >
+        </motion.div >
     )
 }
 

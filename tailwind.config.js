@@ -7,6 +7,7 @@ module.exports = {
     './containers/*.{js,ts,jsx,tsx}',
     './app/**/*.{js,ts,jsx,tsx}',
   ],
+  darkMode: 'class',
   theme: {
     colors: {
       primary: 'var(--theme-primary)',

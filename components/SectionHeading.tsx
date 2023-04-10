@@ -6,6 +6,7 @@ interface Props {
 }
 
 const SectionHeading: FC<Props> = ({ title, light_title }) => {
+
     return (
         <div className='w-full pb-16'>
             <h1 className={`${light_title} w-full before:opacity-20 before:text-5xl md:before:text-7xl

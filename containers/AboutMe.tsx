@@ -5,11 +5,11 @@ import Button from '@/components/Button'
 
 const AboutMe: FC = () => {
     return (
-        <div className='flex flex-col items-center text-white'>
+        <div className='flex flex-col items-center text-black dark:text-white'>
             <SectionHeading title='Know Me More' light_title='before:content-["ABOUT_ME"]' />
             <div className='flex flex-col lg:flex-row lg:gap-10'>
                 <div className='text-center lg:text-start text-gray'>
-                    <div className='font-bold text-3xl text-white text-center lg:text-start mb-5'>
+                    <div className='font-bold text-3xl text-black dark:text-white text-center lg:text-start mb-5'>
                         <h1>I&apos;m <span className='text-primary'>{user_name},</span> {user_title_skill}</h1>
                     </div>
                     {user_description?.map((description: string, indx: number) => (
