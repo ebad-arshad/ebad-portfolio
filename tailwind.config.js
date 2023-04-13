@@ -12,14 +12,14 @@ module.exports = {
     colors: {
       primary: 'var(--theme-primary)',
       white: '#fff',
-      gray: '#6c757d',
+      gray: '#e0e0e0',
       black: '#0b0b13',
       light_black: '#10101a',
     },
     backgroundColor: {
       primary: 'var(--theme-primary)',
       white: '#fff',
-      gray: '#6c757d',
+      gray: '#e0e0e0',
       black: '#0b0b13',
       light_black: '#10101a',
       sidebar: '#0c0c14',

@@ -22,3 +22,7 @@ html {
     background: var(--theme-primary);
     color: white;
 }
+
+.transitions {
+    @apply transition duration-300
+}
